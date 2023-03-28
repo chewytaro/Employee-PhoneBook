@@ -92,3 +92,9 @@ const {
           }
         });
   }
+
+  mainPage();
+
+  module.exports = {
+    mainPage
+  };
