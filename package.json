@@ -1,15 +1,14 @@
 {
   "name": "employee-phonebook",
   "version": "1.0.0",
-  "description": "A place to track and modiy employee's information",
+  "description": "A quick and easy database with employee's information that also allows the user to add more employees",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "http://github/chewytaro/employee-phonebook"
+    "url": "https://github/chewytaro/employee-phonebook"
   },
   "author": "Wendy Vu",
   "license": "ISC",

@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const database = require('./db/database');
+const database = require('./db/database.js');
 const logo = require("asciiart-logo");
 const logoText = logo({ name: "Employee PhoneBook"}).render();
 
@@ -11,13 +11,6 @@ const {
     addDepartment,
     addRole,
     addEmployee,
-    updateEmployeeRole,
-    updateEmployeeManager,
-    viewEmployeesByManager,
-    viewEmployeesByDepartment,
-    deleteDepartment,
-    deleteRole,
-    deleteEmployee
   } = require('./db/database');
   
   console.log(logoText);
@@ -35,13 +28,6 @@ const {
         'Add a department',
         'Add a role',
         'Add an employee',
-        'Update an employee role',
-        'Update an employee manager',
-        'View employees by manager',
-        'View employees by department',
-        'Delete a department',
-        'Delete a role',
-        'Delete an employee',
         'Actually, nothing'
         ]
      })
@@ -64,27 +50,6 @@ const {
               break;
             case 'Add an employee':
               addEmployee();
-              break;
-            case 'Update an employee role':
-              updateEmployeeRole();
-              break;
-            case 'Update an employee manager':
-              updateEmployeeManager();
-              break;
-            case 'View employees by manager':
-              viewEmployeesByManager();
-              break;
-            case 'View employees by department':
-              viewEmployeesByDepartment();
-              break;
-            case 'Delete a department':
-              deleteDepartment();
-              break;
-            case 'Delete a role':
-              deleteRole();
-              break;
-            case 'Delete an employee':
-              deleteEmployee();
               break;
             case 'Actually, nothing':
               dbConnection.end();
