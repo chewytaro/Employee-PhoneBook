@@ -1,15 +1,32 @@
-INSERT INTO departments (name) VALUES ('Servers');
-INSERT INTO departments (name) VALUES ('Leadership');
-INSERT INTO departments (name) VALUES ('Management');
+USE company_db
 
-INSERT INTO roles (title, salary, department_id) VALUES ('Part Time Servers', 50000, 1);
-INSERT INTO roles (title, salary, department_id) VALUES ('Full Time Servers', 90000, 1);
-INSERT INTO roles (title, salary, department_id) VALUES ('Server Supervisor', 100000, 2);
-INSERT INTO roles (title, salary, department_id) VALUES ('Assistant Manager', 130000, 2);
-INSERT INTO roles (title, salary, department_id) VALUES ('Manager', 150000, 3);
+INSERT INTO department (id, name)
+VALUES  (1, 'Sales'),
+        (2, 'Marketing'),
+        (3, 'Engineering'),
+        (4, 'Human Resources'),
+        (5, 'Finance'),
+        (6, 'Customer Support');
 
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Jacky', 'Chan', 1, null);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Will', 'Smith', 2, null);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Miley', 'Cyrus', 3, null);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Magic', 'Mike', 3, null);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Michael', 'Buble', 5, 777);
+INSERT INTO role (id, title, salary, department_id) 
+VALUES  (1, 'Sales Manager', 100000, 1),
+        (2, 'Marketing Coordinator', 50000, 2),
+        (3, 'Software Engineer', 80000, 3),
+        (4, 'Human Resources Specialist', 60000, 4),
+        (5, 'Financial Analyst', 70000, 5),
+        (6, 'Customer Support Rep', 40000, 6);
+
+-- Seed employee table
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id) 
+VALUES  (1, 'John', 'Doe', 1, NULL),
+        (2, 'Jane', 'Smith', 2, NULL),
+        (3, 'Bob', 'Johnson', 3, NULL),
+        (4, 'Mary', 'Williams', 4, 1),
+        (5, 'James', 'Brown', 5, NULL),
+        (6, 'Sarah', 'Davis', 6, 2);
+
+
+
+
+
+
